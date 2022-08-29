@@ -19,3 +19,4 @@ class OwnerRetrieveUpdateDestroyView(
     generics.RetrieveUpdateDestroyAPIView):
     queryset = Owner.objects.filter(is_active=True)
     serializer_class = OwnerDetailSerializer
+    search_fields = ['name']
